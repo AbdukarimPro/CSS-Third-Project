@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(image/sky-09.jpg);
+    overflow: hidden;
+}
+.helicopter{
+    width: 300px;
+    height: 200px;
+    background-image: url(https://www.animatedimages.org/data/media/72/animated-helicopter-image-0037.gif);
+    transform: translateX(-350px);
+    animation: heli 5s linear both;
+}
+
+.city {
+    width: 500%;
+    height: 250px;
+    position: absolute;
+    background:  url(	https://car-animation-1-portfolio.netlify.app/building-03.png);
+    background-repeat: repeat-x;
+    z-index: 100;
+    bottom: 230px;
+    animation: city 25s linear infinite;
+}
+
+.road{
+    width: 500%;
+    height: 250px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(image/road.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    animation: road 10s linear infinite;
+    /* overflow: hidden; */
+}
+
+.road_image{
+    height: 100%;
+    width: 500%;
+
+}
+
+.car img{
+    width: 500px;
+    left: 450px;
+    bottom: 50px;
+    position: fixed;
+    animation: car 1s infinite linear;
+}
+.wheels{
+    width: 400px;
+    position: absolute;
+    left: 490px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 60px;
+    z-index: 500;
+}
+
+.wheel-front{
+    width: 90px ;
+    margin-left: 3px;
+    animation: wheels 1s linear infinite;    
+}
+.wheel-back{
+    width: 90px ;
+    animation: wheels 1s linear infinite; 
+}
+
+@keyframes road{
+    100%{
+        transform: translateX(-3000px);
+        transition: 0.3s linear;
+    }
+}
+
+@keyframes city{
+    100%{
+        transform: translateX(-3000px);
+        transition: 0.3s linear;
+    }
+}
+@keyframes wheels{
+    100%{
+        transform: rotate(360deg);
+        transition: 0.3s linear;
+    }
+}
+@keyframes car{
+    0%{
+        transform: translateY(3px);
+        transition: 0.5s linear;
+    }
+    50%{
+        transform: translateY(0px);
+        transition: 0.5s linear;
+    }
+    100%{
+        transform: translateY(3px);
+        transition: 0.5s linear;
+    }
+    
+}
+
+@keyframes heli{
+    100%{
+        transform: translateX(2000px);
+        transition: 5s linear;
+    }
+}
